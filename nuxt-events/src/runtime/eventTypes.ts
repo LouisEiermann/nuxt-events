@@ -1,0 +1,1 @@
+export type EVENT_TYPES = 'BUTTON_CLICKED'
