@@ -1,7 +1,7 @@
 {
-  "name": "my-module",
+  "name": "nuxt-events",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
+  "description": "Simple Eventbus for Nuxt",
   "license": "MIT",
   "type": "module",
   "exports": {

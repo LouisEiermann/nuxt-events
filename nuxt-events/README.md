@@ -7,7 +7,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# Nuxt-Events
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -21,23 +21,21 @@ Find and replace all on all files (CMD+SHIFT+F):
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- 🚠 &nbsp;Simple Event bus
 
-## Quick Setup
+## Setup
 
-1. Add `my-module` dependency to your project
+1. Add `nuxt-events` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add nuxt-events
 
 # Using yarn
-yarn add --dev my-module
+yarn add nuxt-events
 
 # Using npm
-npm install --save-dev my-module
+npm install nuxt-events
 ```
 
 2. Add `my-module` to the `modules` section of `nuxt.config.ts`
@@ -45,12 +43,31 @@ npm install --save-dev my-module
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    'nuxt-events'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+That's it! You can now use ```nuxt-events``` in your Nuxt app ✨
+
+## How to use this module
+
+1. Import the module in your page or component: ```const { $events } = useNuxtApp()```
+2. Define your event handler:
+
+```js
+const eventHandler = () => {
+  // Do something awesome
+}
+
+$events.on('${THE_NAME_OF_YOUR_EVENT}', eventHandler)
+```
+
+3. Emit your event:
+
+```js
+$events.emit('${THE_NAME_OF_YOUR_EVENT}')
+```
 
 ## Development
 
